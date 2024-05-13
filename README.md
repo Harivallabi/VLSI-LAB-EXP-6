@@ -15,22 +15,29 @@ PROCEDURE
 SCHEMATIC ENTRY:
 
 Creating a new library:
-~~~
+
 1.In the library manager, execute File - New library. The new library form appears.
+
 2.In the new library form, type ‘my design lib’ in the name section.
+
 3.In the field of directory section, verify that the path to the library is set to ~/Database / Cadence- analog – lab –bl3 and click ok.
+
 4.In the next ‘technology file for new library form select option attach to an existing tech file and click ok.
+
 5.In the ‘attach design library to technology file’ form, select gpdk045 form the cyclic field and click ok.
+
 6.After creating a new library you can verify it from the library manager.
+
 7.If you right click on the ‘my design lib’ and select properties, you will find that gpdk045 library is attached as techlib to ‘my design lib’.
-~~~
 
 Creating a schematic cell view:
-~~~
+
 1.In the CIW or library manager, execute file – new – cell viw.
+
 2.Setup the new file form as follows, Do not edit the library path file and the above might be different from the path shown in your form.
+
 3.Click ok when done the above setting. A black schematic window for the inverter design appears.
-~~~
+
 Adding components to schematic:
 
 1.In the inverter schematic window, click the instance fixed menu icon to display the add instance form.
@@ -56,19 +63,26 @@ gpdk045	NMOS
 
 
 Adding pins to schematic:
-~~~
+
 1.Click the pin fixed menu icon in the schematic window. You can execute create pin or press ‘p’.
+
 2.Add pin form appears. Type the following in the ADD pin form in the next order leaving space between the pin.
 PIN NAMES	DIRECTION
 Vin,Vdd,Vss	Input
 Vout	Output
+
 3.Select cancel and then the schematic window enter window file or press the f bind key.
+
 Adding wires to schematic:
+
 1.Click the wire (narrow) icon in the schematic window.
+
 2.In the schematic window click on a pin of one of your components as the first point for your wiring. A diamond shape appears over the starting point of this wire.
+
 3.Follow the prompts at the bottom of design window and click left on the destination point for your wire. A wire is routed between the source and destination points.
+
 4.Complete the wiring as shown in the figure and when done wiring press ECS key in the schematic window to cancel wiring.
-~~~
+
 
 Saving the design:
 
@@ -108,28 +122,46 @@ Analog lib	Vdc, gnd	Vdc = 1.8v
 ANALOG SIMULATION WITH SPECTRA:
 
 Starting the simulation environment:
-~~~
+
 1.In the Inverter-test schematic window execute launch – ADEL. The variable virtuoso analog design environment (ADE) simulation window appears.
 Choosing a simulator:
+
 1.In the simulation window (ADE) execute setup – simulator / directory / host.
+
 2.In the choosing simulator form, set the simulator field to specra and click ok.
+
 3.In the simulation window (ADE) execute the setup model libraries.
+
 To complete, move the cursor and click ok.
+
 Choosing Analysis:
+
 1.Click the choose- Analysis icon in the simulation window (ADE).
+
 2.The choosing analysis form appears.
+
 3.To Setup the transient analysis.
+
 a.In the analysis section select tron.
+
 b.Set the stop time as 100ns
+
 c.Click at the moderate or enabled button and the bottom and then click apply.
+
 4.To set for DC analysis
+
 a.In the analysis section select DC.
+
 b.Turn on save DC operating point.
+
 c.Turn on the component parameters.
+
 d.Double click the select Vpulse source or Type V0 (capital V zero).
+
 e.Select the DC voltage in the select window parameter and click in the form start and stop voltages are 0 to 1.8.
+
 f.Select the enable button and click apply and then click ok.
-~~~
+
 Selecting output for plotting:
 
 1.Execute the o/p’s to be plotted  -select on sschematic in the simulation window.
